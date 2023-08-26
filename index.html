@@ -144,6 +144,12 @@
             }
             tornado.onpointerup = () => tornado.src = 'img/tornado_d.png'
 
+            document.body.onpointerdown = () => {
+                if (buzz.audioCtx.state != `running`) {
+                    buzz.audioCtx.resume ()
+                }
+            }
+
 
         </script>
     </body>
