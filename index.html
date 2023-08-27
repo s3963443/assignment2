@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+
+        <title>Climeter</title>
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+
+    </head>
+
+    <body style="background-color:rgb(8,26,43);">
+
+        <div class="row">
+            <div class="image-container"><img id="hot" src="img/sun_d.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="thu" src="img/thunder_d.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="wil" src="img/wildfire_d.png" height="200" width="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="col" src="img/cold_d.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="flo" src="img/flood_d.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="tsu" src="img/tsunami_d.png" height="200" width="200"/></div>
+            </div>
+
+        <div class="row">
+            <div class="image-container"><img id="ava" src="img/avalanche_d.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="win" src="img/windy_d.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="tor" src="img/tornado_d.png" height="200" width="200"/></div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.2/buzz.min.js" ></script>
+
+        <script>
+            console.log (`mp3 support is ${ buzz.isMP3Supported () }`)
+            console.log (`wav support is ${ buzz.isWAVSupported () }`)
+
+            const hotsound = new buzz.sound ("sound/f_hot.wav")
+            const thusound = new buzz.sound ("sound/f_thu.wav")
+            const wilsound = new buzz.sound ("sound/f_wil.wav")
+            const colsound = new buzz.sound ("sound/f_cold.wav")
+            const flosound = new buzz.sound ("sound/f_flo.wav")
+            const tsusound = new buzz.sound ("sound/f_tsu.wav")
+            const avasound = new buzz.sound ("sound/f_ava.wav")
+            const winsound = new buzz.sound ("sound/f_win.wav")
+            const torsound = new buzz.sound ("sound/f_tor.wav")
+
+            const hot = document.getElementById ("hot")
+            hot.onmouseover = () => hot.src = 'img/sun_h.png'
+            hot.onmouseout = () => hot.src = 'img/sun_d.png'
+            hot.onpointerdown = () => {
+                hotsound.play ()
+                hot.src = ' img/sun_c.png'
+
+            }
+            hot.onpointerup = () => hot.src = 'img/sun_d.png'
+
+            const thunder = document.getElementById ("thu")
+            thunder.onmouseover = () => thunder.src = 'img/thunder_h.png'
+            thunder.onmouseout = () => thunder.src = 'img/thunder_d.png'
+            thunder.onpointerdown = () => {
+                thusound.play ()
+                thunder.src = 'img/thunder_c.png'
+            
+            }
+            thunder.onpointerup = () => thunder.src = 'img/thunder_d.png'
+
+            const wildfire = document.getElementById ("wil")
+            wildfire.onmouseover = () => wildfire.src = 'img/wildfire_h.png'
+            wildfire.onmouseout = () => wildfire.src = 'img/wildfire_d.png'
+            wildfire.onpointerdown = () => {
+                wilsound.play ()
+                wildfire.src = 'img/wildfire_c.png'
+            
+            }
+            wildfire.onpointerup = () => wildfire.src = 'img/wildfire_d.png'
+
+            const cold = document.getElementById ("col")
+            cold.onmouseover = () => cold.src = 'img/cold_h.png'
+            cold.onmouseout = () => cold.src = 'img/cold_d.png'
+            cold.onpointerdown = () => {
+                colsound.play ()
+                cold.src = 'img/cold_c.png'
+            
+            }
+            cold.onpointerup = () => cold.src = 'img/cold_d.png'
+
+            const flood = document.getElementById ("flo")
+            flood.onmouseover = () => flood.src = 'img/flood_h.png'
+            flood.onmouseout = () => flood.src = 'img/flood_d.png'
+            flood.onpointerdown = () => {
+                flosound.play ()
+                flood.src = 'img/flood_c.png'
+            
+            }
+            flood.onpointerup = () => flood.src = 'img/flood_d.png'
+
+            const tsunami = document.getElementById ("tsu")
+            tsunami.onmouseover = () => tsunami.src = 'img/tsunami_h.png'
+            tsunami.onmouseout = () => tsunami.src = 'img/tsunami_d.png'
+            tsunami.onpointerdown = () => {
+                tsusound.play ()
+                tsunami.src = 'img/tsunami_c.png'
+            
+            }
+            tsunami.onpointerup = () => tsunami.src = 'img/tsunami_d.png'
+
+            const avalanche = document.getElementById ("ava")
+            avalanche.onmouseover = () => avalanche.src = 'img/avalanche_h.png'
+            avalanche.onmouseout = () => avalanche.src = 'img/avalanche_d.png'
+            avalanche.onpointerdown = () => {
+                avasound.play ()
+                avalanche.src = 'img/avalanche_c.png'
+            
+            }
+            avalanche.onpointerup = () => avalanche.src = 'img/avalanche_d.png'
+
+            const windy = document.getElementById ("win")
+            windy.onmouseover = () => windy.src = 'img/windy_h.png'
+            windy.onmouseout = () => windy.src = 'img/windy_d.png'
+            windy.onpointerdown = () => {
+                winsound.play ()
+                windy.src ='img/windy_c3.png'
+
+            }
+            windy.onpointerup = () => windy.src = 'img/windy_d.png'
+
+            const tornado = document.getElementById ("tor")
+            tornado.onmouseover = () => tornado.src = 'img/tornado_h.png'
+            tornado.onmouseout = () => tornado.src = 'img/tornado_d.png'
+            tornado.onpointerdown = () => {
+                torsound.play ()
+                tornado.src = 'img/tornado_c.png'
+            
+            }
+            tornado.onpointerup = () => tornado.src = 'img/tornado_d.png'
+
+            document.body.onpointerdown = () => {
+                if (buzz.audioCtx.state != `running`) {
+                    buzz.audioCtx.resume ()
+                }
+            }
+
+
+        </script>
+    </body>
+    
+</html>
